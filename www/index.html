@@ -74,12 +74,13 @@
                 {
                     cnv.drawImage(target, xPos, yPos);
                 }
-                watch = navigator.accelerometer.watchAcceleration(success, failure, {frequency: 25});
+                watch = navigator.accelerometer.watchAcceleration(success, failure, {frequency: 1000});
 
             }
 
             function success(accel)
             {
+                alert('Leitura');
                 document.getElementById("xOut").innerHTML = accel.x;
                 document.getElementById("yOut").innerHTML = accel.y;
                 document.getElementById("zOut").innerHTML = accel.z;

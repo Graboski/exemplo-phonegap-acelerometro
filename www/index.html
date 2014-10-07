@@ -42,7 +42,7 @@
 
             }
         </style>
-        <script type="text/javascript" src="js/phonegap.js"></script>
+        <script type="text/javascript" src="js/cordova-2.7.0.js"></script>
         <script language="javascript">
             var watch = 0;
             var cnv;
@@ -59,7 +59,6 @@
 
             function init()
             {
-                alert('Inicializando...');
                 var iW = window.innerWidth;
                 var iH = window.innerHeight;
                 canvas= document.getElementById('myCanvas');
@@ -80,7 +79,6 @@
 
             function success(accel)
             {
-                alert('Leitura');
                 document.getElementById("xOut").innerHTML = accel.x;
                 document.getElementById("yOut").innerHTML = accel.y;
                 document.getElementById("zOut").innerHTML = accel.z;

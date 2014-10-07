@@ -55,7 +55,7 @@
             {
                 //init();
                 document.addEventListener("deviceready", init, false);
-                document.addEventListener("orientationchange", doOnOrientationChange);
+                window.addEventListener("orientationchange", doOnOrientationChange, true);
             }
 
             function init()

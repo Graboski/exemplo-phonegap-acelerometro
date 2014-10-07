@@ -55,6 +55,7 @@
             {
                 //init();
                 document.addEventListener("deviceready", init, false);
+                document.addEventListener("orientationchange", doOnOrientationChange);
             }
 
             function init()
@@ -98,6 +99,20 @@
             function failure()
             {
                 alert("Error");
+            }
+
+            function doOnOrientationChange()
+            {
+                switch(window.orientation)
+                {
+                  case -90:
+                  case 90:
+                    alert('landscape');
+                    break;
+                  default:
+                    alert('portrait');
+                    break;
+                }
             }
         </script>
         <title>Exemplo de uso do Acelerômetro com Phonegap</title>

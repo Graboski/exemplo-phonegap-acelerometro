@@ -83,8 +83,8 @@
                 document.getElementById("yOut").innerHTML = accel.y;
                 document.getElementById("zOut").innerHTML = accel.z;
                 cnv.clearRect(0, 0, canvas.width, canvas.height);
-                xPos += -1*(accel.x * 1.5);
-                yPos += (accel.y * 1.5);
+                xPos += Math.min(Math.max(-1*(accel.x * 1.5), 0), iW);
+                yPos += Math.min(Math.max((accel.y * 1.5), 0), iH);
                 cnv.drawImage(target, xPos, yPos);
 
             }

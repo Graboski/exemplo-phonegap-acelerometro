@@ -86,8 +86,8 @@
                 xPos += -1*(accel.x * 1.5);
                 yPos += (accel.y * 1.5);
 
-                xPos = Math.min(Math.max(xPos, 0), canvas.width);
-                yPos = Math.min(Math.max(yPos, 0), canvas.height);
+                xPos = Math.min(Math.max(xPos, 0), canvas.width-target.width);
+                yPos = Math.min(Math.max(yPos, 0), canvas.height-target.height);
                 cnv.drawImage(target, xPos, yPos);
                 document.getElementById("xImg").innerHTML = xPos;
                 document.getElementById("yImg").innerHTML = yPos;
